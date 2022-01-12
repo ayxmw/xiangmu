@@ -66,16 +66,16 @@ try:
     signs = conf["UserData"].getint("signs", 0)
     if signs == 0:
         yourID = conf["UserData"].get("yourID", "null")
-        if yourID == "null" or yourID == "你的学号":
+        if yourID == "null" or yourID == "T2019503102":
             raise NoConf('yourID')
     else:
         IDs = conf["UserData"].get("IDs", "null")
-        if IDs == "null" or IDs == '学号1,学号2,学号3,学号4':
+        if IDs == "null" or IDs == 'T2019503102,T2019503104,T2019209131,T2019503106':
             raise NoConf('IDs')
         else:
             IDList = IDs.split(',')
     schoolID = conf["UserData"].get("schoolID", 'null')
-    if schoolID == 'null' or schoolID == '你的高校代码':
+    if schoolID == 'null' or schoolID == '4136013423':
         raise NoConf('schoolID')
     identity = conf["UserData"].getint("identity", 0)
     sfby = conf["UserData"].getint("sfby", 1)
@@ -84,7 +84,7 @@ try:
         lng = conf["UserData"].getfloat("lng", 0.0)
         lat = conf["UserData"].getfloat("lat", 0.0)
         zddlwz = conf["UserData"].get("IDs", "null")
-        if lng == 0.0 or lat == 0.0 or zddlwz == "null" or lng == 123.456789 or lat == 22.222222 or zddlwz == "你的地址":
+        if lng == 0.0 or lat == 0.0 or zddlwz == "null" or lng == 115.793989 or lat == 28.660004 or zddlwz == "江西省南昌市红谷滩区":
             raise NoConf('定位签到数据')
     server_chan = conf["NotificationData"].getint("server_chan", 0)
     if server_chan == 1:
